@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Alexian V</title>
+
+    <link rel="stylesheet" href="style/layout.css">
+    <link rel="stylesheet" href="style/components.css">
+
+    <script src="https://kit.fontawesome.com/1f726f8aec.js" crossorigin="anonymous"></script> <!--Icones-->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "XzykW4F7BIBJQgpt7",
+            });
+        })();
+    </script>
+
+    <script src="script.js" defer></script> <!--Mon script JS--> 
+</head>
+<body>
+    <header>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="#accueil" class="nav-li p1">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#projets" class="nav-li p1">
+                        Projets
+                        <span class="dropdown-arrow"></span>
+                    </a>
+
+                    <ul class="dropdown-project-ul">
+                        <li class="project-li">
+                            <a href="#projets">
+                                <img src="" alt="" width="40" height="40">
+                                <p class="p2">PokéCollect</p>
+                            </a>
+                        </li>
+                        <li class="project-li">
+                            <a href="#projets">
+                                <img src="" alt="" width="40" height="40">
+                                <p class="p2">A l'WestFest</p>
+                            </a>
+                        </li>
+                        <li class="project-li">
+                            <a href="#projets">
+                                <img src="" alt="" width="40" height="40">
+                                <p class="p2">SoL'ecoute</p>
+                            </a>
+                        </li>
+                        <li class="project-li">
+                            <a href="#projets">
+                                <img src="" alt="" width="40" height="40">
+                                <p class="p2">SportKoh</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="#contact" class="nav-li p1">Contact</a></li>
+            </ul>
+        </nav>
+        <img src="" alt="Logo" width="60" height="60">
+        
+
+    </header>
+
+    <main>
+        <section class="hero-banner" id="accueil">
+            <h1 class="hero-title scale-transition">Portfolio d'Alexian Vannieuwenhuyze</h1>
+            <h1 class="h1 scale-transition">Recherche alternance Dev web front-end</h1>
+        </section>
+        
+        <section class="last-project-container section-container">
+            <h1 class="h1 title-after">Derniers projets</h1>
+            <article class="last-project-img">
+                <a href="#projets" class="image1-container image-container">
+                    <img src="media/images/SAE105_preview.png" alt="" class="img-project" width="100%" height="100%">
+                    <h1 class="h1">Découvrir</h1>
+                    <p>PokeCollect</p>
+                </a>
+                <div class="image2-3-container">
+                    <a href="#projets" class="image-container">
+                        <img src="media/images/TP3_preview.png" alt="" class="img-project" width="100%" height="100%">           
+                        <h1 class="h1">Découvrir</h1>
+                        <p>Panier client JS</p>
+                    </a>
+                    <a href="#projets" class="image-container">
+                        <img src="media/images/WESTFEST_preview.png" alt="" class="img-project" width="100%" height="100%">           
+                        <h1 class="h1">Découvrir</h1>
+                        <p>Affiche A l'WestFest</p>
+                    </a>
+                </div>
+            </article>
+        </section>
+
+        <span class="separation-line"></span>
+
+        <section class="presentation-container section-container">
+            <h1 class="h1 title-after">Présentation</h1>
+            <section class="prensentation-content">
+                <article class="left-presentation-container">
+                    <p class="p1" id="movement-text"></p>
+                    <p class="p2">
+                        Étudiant en BUT MMI à Lannion, je souhaite
+                        vous présenter mes projets plus en détail.
+                        Ce qui m’anime dans la vie : la curiosité et
+                        l'envie d'apprendre
+                        Je n'hésite pas à aller chercher plus
+                        d'informations sur un domaine que je ne
+                        maîtrise pas
+                        J'aime essayer et commencer de nouveaux
+                        projets que ce soit seul ou en équipe !
+                    </p>
+                    <div class="presentation-contact">
+                        <a href="media/telechargements/CV.pdf" target="_blank" class="button-javacript button-cv"><span>Télécharger le CV</span></a>
+                        <ul>
+                            <a class="contact-logo" href="https://github.com/AlexianVnh/"><i class="fa-brands fa-github"></i></a>
+                            <a class="contact-logo" href="https://www.linkedin.com/in/alexian-vannieuwenhuyze-a8583526a/"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a class="contact-logo" href="mailto:vnh.alexian@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                        </ul>
+                    </div>
+                </article>
+                <article class="right-presentation-container white-border">
+                    <img src="media/images/background_portfolio.png" alt="" width="100%" height="100%">
+                </article>
+            </section>
+        </section>
+
+        <span class="separation-line"></span>
+
+        <section class="project-container section-container" id="projets">
+            <h1 class="h1 title-after">Mes projets</h1>
+            <section class="project-content">
+                <nav class="project-btn-list">
+                    <button id="btn-all" onclick="" class="active"><i class="fa-solid fa-globe"></i>Tous</button>
+                    <button id="btn-web" onclick=""><i class="fa-brands fa-html5"></i>Web</button>
+                    <button id="btn-prodgraphique" onclick=""><i class="fa-solid fa-pen"></i>Graphisme / 3D</button>
+                    <button id="btn-gestion" onclick=""><i class="fa-solid fa-clipboard"></i>Gestion / Comm</button>
+                </nav>
+
+                <div class="project-content-list">
+                    <article class="card-container all" id="web">
+                        <div class="card little-card" id="HTML">
+                            <i class="fa-brands fa-html5"></i>
+                        </div>
+                        <div class="card big-card" id="TP3-2">
+                            
+                        </div>
+                        <div class="card little-card" id="TRANSPARENT">
+                            <!--VIDE-->
+                        </div>
+                        <div class="card big-card card-squelet" id="TP3-4">
+                            <h3>Outils utilisés</h3>
+                            <ul>
+                                <p>- HTML</p>
+                                <p>- CSS</p>
+                                <p>- Javascript</p>
+                                <p>- VSC</p>
+                                <p>- Console Chrome</p>
+                            </ul>
+
+                        </div>
+                        <div class="card little-card" id="TRANSPARENT">
+                            <!--VIDE-->
+                        </div>
+                        <div class="card big-card card-squelet" id="TP3-6">
+                            <h3>Contexte</h3>
+                            <p class="p2">
+                                Ce projet a été réalisé seul en B.U.T. MMI
+                                et j'ai suivi un TP dans lequel nous avons appris à 
+                                gérer les éléments du DOM en Javascript.
+                            </p>
+                        </div>
+                        <div class="card little-card" id="JS">
+                            <i class="fa-brands fa-js"></i>
+                        </div>
+                        <div class="card big-card card-squelet-preview" id="TP3-8"> <!--Carte la plus haute-->
+                            <h3>Panier client Javascript</h3>
+                            <div class="project-see-more">
+                                <p class="p2 text-shadow">Février 2024</p>
+                                <div>
+                                    <a href="" class="project-see-more-btn">En voir +</a>
+                                    <i class="fa-brands fa-html5"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card-container all" id="web">
+                        <div class="card little-card" id="CSS">
+                            <i class="fa-brands fa-css3-alt"></i>
+                        </div>
+                        <div class="card big-card" id="pokemon-2">
+                            
+                        </div>
+                        <div class="card little-card" id="HTML">
+                            <i class="fa-brands fa-html5"></i>
+                        </div>
+                        <div class="card big-card card-squelet" id="pokemon-4">
+                            <h3>Outils utilisés</h3>
+                            <ul>
+                                <li>- HTML</li>
+                                <li>- CSS</li>
+                                <li>- Javascript</li>
+                                <li>- PHP</li>
+                                <li>- Figma</li>
+                                <li>- VSC</li>
+                                <li>- Affinity Designer</li>
+                            </ul>
+
+                        </div>
+                        <div class="card little-card" id="PHP">
+                            <i class="fa-brands fa-php"></i>
+                        </div>
+                        <div class="card big-card card-squelet" id="pokemon-6">
+                            <h3>Contexte</h3>
+                            <p class="p2">
+                                Ce site de gestion d'une Collection
+                                de Pokémons a été réalisé seul en B.U.T. MMI
+                                avec un système de login, d'ajout, de suppression 
+                                et de renommage.
+                            </p>
+                        </div>
+                        <div class="card little-card" id="JS">
+                            <i class="fa-brands fa-js"></i>
+                        </div>
+                        <div class="card big-card card-squelet-preview" id="pokemon-8"> <!--Carte la plus haute-->
+                            <h3 class="text-shadow">Collection de Pokémon</h3>
+                            <div class="project-see-more">
+                                <p class="p2 text-shadow">Janvier 2024</p>
+                                <div>
+                                    <a href="" class="project-see-more-btn">En voir +</a>
+                                    <i class="fa-brands fa-html5"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </article>     
+
+                    <article class="card-container all" id="web">
+                        <div class="card little-card" id="HTML">
+                            <i class="fa-solid fa-image"></i>
+                        </div>
+                        <div class="card big-card" id="ERGONOMIE-2">
+                            
+                        </div>
+                        <div class="card little-card" id="TRANSPARENT">
+                            <!--VIDE-->
+                        </div>
+                        <div class="card big-card card-squelet" id="ERGONOMIE-4">
+                            <h3>Outils utilisés</h3>
+                            <ul>
+                                <p>- Figma</p>
+                                <p>- 6 lois de la GESTALT</p>
+                            </ul>
+
+                        </div>
+                        <div class="card little-card" id="TRANSPARENT">
+                            <!--VIDE-->
+                        </div>
+                        <div class="card big-card card-squelet" id="ERGONOMIE-6">
+                            <h3>Contexte</h3>
+                            <p class="p2">
+                                Cette maquette réalisé en BUT M.M.I. m'a permis de 
+                                comprendre les principales notions de l'"ergonomie", 
+                                des couleurs, contrastes aux tailles et polices.
+                            </p>
+                        </div>
+                        <div class="card little-card" id="PHP">
+                            <i class="fa-brands fa-figma"></i>
+                        </div>
+                        <div class="card big-card card-squelet-preview" id="ERGONOMIE-8"> <!--Carte la plus haute-->
+                            <h3>Maquette site fictif</h3>
+                            <div class="project-see-more">
+                                <p class="p2 text-shadow">Octobre 2023</p>
+                                <div>
+                                    <i class="fa-brands fa-html5"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="card-container all" id="web">
+                        <div class="card little-card" id="HTML">
+                            <i class="fa-solid fa-image"></i>
+                        </div>
+                        <div class="card big-card" id="SO-2">
+                            
+                        </div>
+                        <div class="card little-card" id="TRANSPARENT">
+                            <!--VIDE-->
+                        </div>
+                        <div class="card big-card card-squelet" id="SO-4">
+                            <h3>Outils utilisés</h3>
+                            <ul>
+                                <p>- Figma</p>
+                                <p>- Pinterest</p>
+                                <p>- Spotify</p>
+                            </ul>
+
+                        </div>
+                        <div class="card little-card" id="CSS">
+                            <i class="fa-solid fa-music"></i>
+                        </div>
+                        <div class="card big-card card-squelet" id="SO-6">
+                            <h3>Contexte</h3>
+                            <p class="p2">
+                                Ce projet est commun avec un amis, j'ai réalisé la 
+                                maquette qu'il a ensuite intégré. Ce projet en autonomie
+                                m'a permis de travailler en équipe hors des études.
+                            </p>
+                        </div>
+                        <div class="card little-card" id="PHP">
+                            <i class="fa-brands fa-figma"></i>
+                        </div>
+                        <div class="card big-card card-squelet-preview" id="SO-8"> <!--Carte la plus haute-->
+                            <h3>Site d'écoute d'un artiste</h3>
+                            <div class="project-see-more">
+                                <p class="p2 text-shadow">Août 2023</p>
+                                <div>
+                                    <a href="https://solaluneplayer.vercel.app/" class="project-see-more-btn">En voir +</a>
+                                    <i class="fa-brands fa-html5"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card-container all" id="web">
+                        <div class="card little-card" id="HTML">
+                            <i class="fa-brands fa-html5"></i>
+                        </div>
+                        <div class="card big-card" id="SPORTKOH-2">
+                            
+                        </div>
+                        <div class="card little-card" id="CSS">
+                            <i class="fa-brands fa-css3-alt"></i>
+                        </div>
+                        <div class="card big-card card-squelet" id="SPORTKOH-4">
+                            <h3>Outils utilisés</h3>
+                            <ul>
+                                <p>- HTML</p>
+                                <p>- CSS</p>
+                                <p>- VSC</p>
+                                <p>- Figma</p>
+                                <p>- Gloomaps</p>
+                                <p>- Discord</p>
+                            </ul>
+
+                        </div>
+                        <div class="card little-card" id="TRANSPARENT">
+                            <!--VIDE-->
+                        </div>
+                        <div class="card big-card card-squelet" id="SPORTKOH-6">
+                            <h3>Contexte</h3>
+                            <p class="p2">
+                                SportKoh a été réalisé en équipe en B.U.T. Informatique,
+                                à partir du recueil des besoins nous avons
+                                imaginé et développé un site vitrine de séjours sportifs.
+                            </p>
+                        </div>
+                        <div class="card little-card" id="PHP">
+                            <i class="fa-brands fa-figma"></i>
+                        </div>
+                        <div class="card big-card card-squelet-preview" id="SPORTKOH-8"> <!--Carte la plus haute-->
+                            <h3>Site vitrine SportKoh</h3>
+                            <div class="project-see-more">
+                                <p class="p2 text-shadow">Janvier 2023</p>
+                                <div>
+                                    <a href="" class="project-see-more-btn">En voir +</a>
+                                    <i class="fa-brands fa-html5"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!--WESTFEST-->
+                    <article class="card-container all" id="prodgraphique">
+                        <div class="card little-card" id="HTML">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <div class="card big-card" id="WESTFEST-2">
+                            
+                        </div>
+                        <div class="card little-card" id="TRANSPARENT">
+                            <!--VIDE-->
+                        </div>
+                        <div class="card big-card card-squelet" id="WESTFEST-4">
+                            <h3>Missions</h3>
+                            <ul>
+                                <p>- Recherche d'existant</p>
+                                <p>- Création du moodboard</p>
+                                <p>- Concevoir la maquette de l'affiche</p>
+                                <p>- Concevoir l'affiche finale</p>
+                            </ul>
+
+                        </div>
+                        <div class="card little-card" id="TRANSPARENT">
+                            <!--VIDE-->
+                        </div>
+                        <div class="card big-card card-squelet" id="WESTFEST-6">
+                            <h3>Contexte</h3>
+                            <p class="p2">
+                                Pour la première année du Festival A l'WestFest
+                                j'ai réalisé l'affiche promotionnelle sur base du plan de 
+                                communication retenu.
+                            </p>
+                        </div>
+                        <div class="card little-card" id="PHP">
+                            <i class="fa-solid fa-print"></i>
+                        </div>
+                        <div class="card big-card card-squelet-preview" id="WESTFEST-8"> <!--Carte la plus haute-->
+                            <h3>Affiche A l'WestFest</h3>
+                            <div class="project-see-more">
+                                <p class="p2 bold">Janvier 2024</p>
+                                <div>
+                                    <a href="" class="project-see-more-btn">En voir +</a>
+                                    <i class="fa-solid fa-pen"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!--3D-->
+                    <article class="card-container all" id="prodgraphique">
+                        <div class="card little-card" id="TRANSPARENT">
+                            
+                        </div>
+                        <div class="card big-card" id="TROISD-2">
+                            <!--VIDE-->
+                        </div>
+                        <div class="card little-card" id="PHP">
+                            <i class="fa-solid fa-cube"></i>
+                        </div>
+                        <div class="card big-card card-squelet" id="TROISD-4">
+                            <!--VIDE-->
+                        </div>
+                        <div class="card little-card" id="HTML">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <div class="card big-card card-squelet" id="TROISD-6">
+                            <!--VIDE-->
+                        </div>
+                        <div class="card little-card" id="TRANSPARENT">
+                            <!--VIDE-->
+                        </div>
+                        <div class="card big-card card-squelet-preview" id="TROISD-8"> <!--Carte la plus haute-->
+                            <h3>3D Blender</h3>
+                            <div class="project-see-more">
+                                <p class="p2 bold">2021 - 2022</p>
+                                <div>
+                                    <i class="fa-solid fa-pen"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!--SMILE-->
+                    <article class="card-container all" id="gestion">
+                        <div class="card little-card" id="TRANSPARENT">
+                        </div>
+                        <div class="card big-card" id="SMILE-2">
+                            
+                        </div>
+                        <div class="card little-card" id="TRANSPARENT">
+                            <!--VIDE-->
+                        </div>
+                        <div class="card big-card card-squelet" id="SMILE-4">
+                            <h3>Missions</h3>
+                            <ul>
+                                <p>- Imaginer le projet</p>
+                                <p>- Brainstorming</p>
+                                <p>- Rédiger le cahier des charges</p>
+                                <p>- Elaborer le Gantt</p>
+                                <p>- Créer une affiche</p>
+                                <p>- Présenter le projet en soutenance</p>
+                                <p>- Pitcher le projet en 1min</p>
+                            </ul>
+
+                        </div>
+                        <div class="card little-card" id="TRANSPARENT">
+                            <!--VIDE-->
+                        </div>
+                        <div class="card big-card card-squelet" id="SMILE-6">
+                            <h3>Contexte</h3>
+                            <p class="p2">
+                                Smile est un projet commun en B.U.T. MMI
+                                dans lequel nous avons créer et gérer un projet 
+                                avant de le pitcher.
+                            </p>
+                        </div>
+                        <div class="card little-card" id="TRANSPARENT">
+                        </div>
+                        <div class="card big-card card-squelet-preview" id="SMILE-8"> <!--Carte la plus haute-->
+                            <h3>Projet Smile et sa gestion</h3>
+                            <div class="project-see-more">
+                                <p class="p2 bold">Novembre 2023</p>
+                                <div>
+                                    <a href="media/telechargements/SMILE.pdf" target="_blank" class="project-see-more-btn">Télécharger</a>
+                                    <i class="fa-solid fa-clipboard"></i>
+                                    <i class="fa-solid fa-pen"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!--ENDRO-->
+                    <article class="card-container all" id="gestion">
+                        <div class="card little-card" id="TRANSPARENT">
+                        </div>
+                        <div class="card big-card" id="ENDRO-2">
+                            
+                        </div>
+                        <div class="card little-card" id="TRANSPARENT">
+                            <!--VIDE-->
+                        </div>
+                        <div class="card big-card card-squelet" id="ENDRO-4">
+                            <h3>Missions</h3>
+                            <ul>
+                                <p>- Audit de contexte</p>
+                                <p>- Audit économique</p>
+                                <p>- Audit de traffic</p>
+                                <p>- Audit d'accessibilité</p>
+                                <p>- Audit sémiotique</p>
+                                <p>- Audit de l'architecture</p>
+                                <p>- Infographie d'Endro</p>
+                                <p>- Soutenance finale</p>
+                            </ul>
+
+                        </div>
+                        <div class="card little-card" id="TRANSPARENT">
+                            <!--VIDE-->
+                        </div>
+                        <div class="card big-card card-squelet" id="ENDRO-6">
+                            <h3>Contexte</h3>
+                            <p class="p2">
+                                En équipe et en B.U.T. MMI
+                                nous avons auditer l'entreprise Endro
+                                et réalisé une infographie récapitulative.
+                            </p>
+                        </div>
+                        <div class="card little-card" id="TRANSPARENT">
+                        </div>
+                        <div class="card big-card card-squelet-preview" id="ENDRO-8"> <!--Carte la plus haute-->
+                            <h3>Audit de communication d'Endro</h3>
+                            <div class="project-see-more">
+                                <p class="p2 bold">Decembre 2023</p>
+                                <div>
+                                    <a href="media/telechargements/ENDRO.pdf" target="_blank" class="project-see-more-btn">Télécharger</a>
+                                    <i class="fa-solid fa-clipboard"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!--PLANCOMM-->
+                    <article class="card-container all" id="gestion">
+                        <div class="card little-card" id="TRANSPARENT">
+                        </div>
+                        <div class="card big-card" id="PLANCOMM-2">
+                            
+                        </div>
+                        <div class="card little-card" id="TRANSPARENT">
+                            <!--VIDE-->
+                        </div>
+                        <div class="card big-card card-squelet" id="PLANCOMM-4">
+                            <h3>Missions</h3>
+                            <ul>
+                                <p>- recommandation marketing</p>
+                                <p>- nom et slogan</p>
+                                <p>- charte éditoriale</p>
+                                <p>- prototypes</p>
+                                <p>- communiqué de presse</p>
+                                <p>- dossier final</p>
+                                <p>- soutenance finale</p>
+                            </ul>
+
+                        </div>
+                        <div class="card little-card" id="TRANSPARENT">
+                            <!--VIDE-->
+                        </div>
+                        <div class="card big-card card-squelet" id="PLANCOMM-6">
+                            <h3>Contexte</h3>
+                            <p class="p2">
+                                Réalisé à 4 en B.U.T. MMI
+                                nous avons élaborer le plan de communication du Festival
+                                "A l'WestFest" en passant plusieurs étapes menant à
+                                un dossier complet.
+                            </p>
+                        </div>
+                        <div class="card little-card" id="TRANSPARENT">
+                        </div>
+                        <div class="card big-card card-squelet-preview" id="PLANCOMM-8"> <!--Carte la plus haute-->
+                            <h3>Plan de communication "A l'WestFest"    </h3>
+                            <div class="project-see-more">
+                                <p class="p2 bold">Janvier 2024</p>
+                                <div>
+                                    <a href="media/telechargements/PLANCOMM.pdf" target="_blank" class="project-see-more-btn">Télécharger</a>
+                                    <i class="fa-solid fa-clipboard"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </section>
+
+        <span class="separation-line"></span>
+
+        <section class="tool-container section-container">
+            <h1 class="h1 title-after">Mes outils</h1>
+            
+            <h2 class="p1 blue-background">Langages</h2>
+            <ul class="tool-list">
+                <li><img src="media/images/logo/HTML-logo.png" alt="HTML" height="60px">HTML</li>
+                <li><img src="media/images/logo/CSS-logo.png" alt="CSS" height="60px">CSS</li>
+                <li><img src="media/images/logo/JavaScript-logo.png" alt="Javascript" height="60px">Javascript</li>
+                <li><img src="media/images/logo/PHP-logo.png" alt="PHP" height="60px">PHP</li>
+                <li><img src="media/images/logo/SQL-logo.png" alt="SQL" height="60px">SQL</li>
+                <li><img src="media/images/logo/JAVA-logo.png" alt="JAVA" height="60px">JAVA</li>
+                <li><img src="media/images/logo/C_Logo.png" alt="C" height="60px">C</li>
+                <li><img src="media/images/logo/python-logo.png" alt="Python" height="60px">Python</li>
+            </ul>
+
+            <h2 class="p1 blue-background">Applications</h2>
+            <ul class="tool-list">
+                <li><img src="media/images/logo/vsc-logo.png" alt="VisualStudioCode" height="60px">VisualStudioCode</li>
+                <li><img src="media/images/logo/figma_logo.png" alt="Figma" height="60px">Figma</li>
+                <li><img src="media/images/logo/AffinityDesigner.png" alt="AffinityDesigner" height="60px">AffinityDesigner</li>
+                <li><img src="media/images/logo/AffinityPhoto.png" alt="AffinityPhoto" height="60px">AffinityPhoto</li>
+                <li><img src="media/images/logo/illusatrator_logo.png" alt="AdobeIllustrator" height="60px">AdobeIllustrator</li>
+                <li><img src="media/images/logo/SketchUp-Logo.png" alt="Sketchup" height="60px">Sketchup</li>
+                <li><img src="media/images/logo/Blender-logo.png" alt="Blender" height="60px">Blender</li>
+                <li><img src="media/images/logo/Trello.png" alt="Trello" height="60px">Trello</li>
+                <li><img src="media/images/logo/DaVinciResolve.png" alt="DaVinci" height="60px">DaVinci</li>
+            </ul>
+        </section>
+
+        <span class="separation-line"></span>
+
+        <section class="contact-container section-container" id="contact">
+            <h1 class="h1 title-after">Me contacter</h1>
+
+
+            <section>
+                <p class="contact-paragraph p2">
+                    N'hésitez pas à remplir ce formulaire pour 
+                    m'envoyer un mail facilement, je répondrai
+                    au plus vite !
+                    <i class="fa-solid fa-arrow-turn-up"></i>
+                </p>
+
+                <form class="contact-form">
+                    <div class="contact-top">
+                        <div class="contact-group">
+                            <label for="name">Nom / Prénom</label>
+                            <input type="text" id="name" name="name" pattern="[A-Za-z]+" required>
+                        </div>
+                        <div class="contact-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+        
+                    <div class="contact-group">
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="contact-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+        
+                    <div class="contact-bottom">
+                        <button class="button-javacript" type="submit" onclick="sendMail()"><span class="p2">Envoyer</span></button>
+
+                        <ul>
+                            <a class="contact-logo" href="https://github.com/AlexianVnh/"><i class="fa-brands fa-github"></i></a>
+                            <a class="contact-logo" href="https://www.linkedin.com/in/alexian-vannieuwenhuyze-a8583526a/"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a class="contact-logo" href="mailto:vnh.alexian@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                        </ul>
+                    </div>
+                </form>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
+
+

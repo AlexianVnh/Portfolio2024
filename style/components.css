@@ -1,0 +1,589 @@
+/*Barre blanche esthétique en dessous des titres*/
+.title-after {
+    position: relative;
+    width: fit-content;
+    margin-bottom: 40px;
+}
+.title-after::after {
+    content: "";
+    position: absolute;
+    bottom: -10px; right: 0;
+    width: 40%; height: 4px;
+    background-color: var(--white);
+    transition: all 0.2s ease-in-out;
+}
+.title-after:hover::after{
+    width: 100%;
+}
+/*----------------------Sections de contenu------------------------*/
+.section-container {
+    position: relative;
+    width: 70%;
+    margin-inline: auto; /*Centrer le container*/
+    padding: 50px 0;
+}
+
+/*----------------------Lignes entre les sections------------------------*/
+.separation-line {
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: var(--secondaryColor);
+}
+
+/*----------------------Styles très simples------------------------*/
+.text-shadow {
+    text-shadow: #000 1px 0 10px;
+}
+.bold {
+    font-weight: 700;
+}
+.black {
+    color: #000;
+}
+.white-border {
+    border: 5px solid #FFF;
+}
+
+/*----------------------------------------------*/
+
+.nav-li {
+    display: flex;
+    position: relative;
+    padding: 20px; 
+}
+.nav-li::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; left: 0;
+    width: 0%; height: 3px;
+    background-color: var(--white);
+    transition: all 0.2s ease-in-out;
+}
+.nav-li:hover {
+    color: var(--secondaryTextColor);
+}
+.nav-li:hover::after {
+    width: 100%;
+}
+
+
+.dropdown { /*Case projet du nav*/
+    display: flex;
+    align-items: center; 
+    position: relative;
+}
+.dropdown-project-ul { /*Menu déroulant des projets*/
+    display: none; /*Pas affiché de base*/
+    position: absolute;
+    top: 64px; left: 0;
+    z-index: 2; /*devant les textes en bas*/
+    
+    background-color: var(--mainColor);
+    border: solid 1.5px var(--secondaryColor);
+    border-radius: 10px;
+    overflow: hidden; /*Eviter les angles droits au hover*/
+}
+.dropdown-arrow { /*Flèche du menu déroulant*/
+    width: 8px; height: 8px;
+    border-bottom: solid 2px var(--white);
+    border-right: solid 2px var(--white);
+    transform: rotate(45deg);
+
+    margin: 10px 0 0 10px; 
+}
+.dropdown:hover .dropdown-project-ul { /*Quand on survole la case projets, un menu déroulant se déplie*/
+    display: flex;
+    flex-direction: column;
+}
+.dropdown:hover .dropdown-arrow { /*Quand on survole la case projets, la flèche se retourne*/
+    transform: rotate(225deg);
+    margin: 14px 0 0 10px;
+    border-bottom: solid 2px var(--secondaryTextColor);
+    border-right: solid 2px var(--secondaryTextColor);
+}
+.dropdown:hover>.nav-li {
+    color: var(--secondaryTextColor);
+}
+
+
+.project-li a { /*Case d'un projet du menu déroulant*/
+    display: flex;
+    align-items: center;
+    padding: 10px 30px 10px 10px;
+    gap: 8px;
+}
+.project-li a:hover { 
+    background-color: var(--secondaryColor);
+}
+.project-li p {
+    white-space: nowrap;
+}
+
+
+
+/*-----------------------Images des derniers projets------------------------*/
+
+.img-project {
+    position: relative;
+    object-fit: cover;
+    transition: all 0.4s ease-in-out;
+}
+.img-project::after {
+    content: ""; 
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    box-shadow: inset 0px 0px 10px black;
+}
+.img-project:hover {
+    transform: scale(1.15);
+    filter: brightness(0.6);
+}
+
+.img-project + h1{
+    position: absolute;
+    left: 50%; top: 100%; transform: translateX(-50%);
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+}
+.img-project:hover + h1{
+    left: 50%; top: 50%; transform: translate(-50%, -50%);
+}
+
+.img-project ~ p{
+    position: absolute;
+    right: 50%; transform: translateX(50%); 
+    bottom: -30px;
+    transition: all 0.2s ease-in-out;
+}
+.img-project:hover ~ p{
+    position: absolute;
+    bottom: 5px;
+    transition-delay: 0.1s;
+}
+
+
+/*-----------------------Bouton télécharger CV------------------------*/
+.button-javacript {
+    position: relative;
+    flex: 1;
+    padding: 12px 15px 15px 15px;
+    border: 2px solid var(--secondaryColor);
+    text-align: center;
+    overflow: hidden;
+}
+.button-javacript span {
+    position: relative;
+    z-index: 1; /*Passer au dessus de la couleur de fond*/
+}
+.button-javacript::after {
+    content: '';
+    position: absolute;
+    top: var(--y); left: var(--x);
+    transform: translate(-50%, -50%);
+    width: 0; height: 0;
+    border-radius: 50%; /*= Rond*/
+    background-color: var(--secondaryColor);
+    transition: all 0.8s ease;
+}
+.button-javacript:hover span{
+    color: var(--secondaryTextColor);
+}
+.button-javacript:hover::after {
+    width: 500px; /*Pour remplir tout le bouton*/
+    height: 500px;
+}
+.contact-logo {
+    display: flex;
+    justify-content: center; /*Centré*/
+    padding: 10px;
+    background-color: var(--secondaryColor);
+    border: 2px solid var(--secondaryColor);
+}
+.fa-brands, .fa-solid{
+    font-size: 35px;
+}
+.contact-logo:hover .fa-brands, .contact-logo:hover .fa-solid{
+    color: var(--secondaryTextColor);
+}
+
+
+
+
+
+
+/*-----------------------Boutons du tab------------------------*/
+.project-btn-list>button{
+    display: flex;
+    align-items: center;
+
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 20px;
+    font-size: var(--p1);
+}
+
+
+.project-btn-list .fa-solid, .project-btn-list .fa-brands {
+    font-size: 25px;
+    margin-right: 10px;
+}
+.project-btn-list>button:hover {
+    color: var(--secondaryTextColor);
+    background-color: var(--secondaryColor);
+}
+.project-btn-list>button:hover .fa-solid, .project-btn-list>button:hover .fa-brands {
+    color: var(--secondaryTextColor);
+}
+.project-btn-list>button.active {
+    color: var(--secondaryTextColor);
+}
+
+.project-btn-list>button.active .fa-solid,
+.project-btn-list>button.active .fa-brands {
+    color: var(--secondaryTextColor);
+}
+
+
+
+
+
+/*-----------------------Cartes des projets------------------------*/
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    cursor: pointer;
+    min-width: 300px;
+    flex: 1;
+    height: 400px;
+}
+
+.card {
+    position: absolute;
+    aspect-ratio: 5/7;
+    border-radius: 10px;
+    transition: transform 0.8s cubic-bezier(0.05, 0.43, 0.25, 0.95);
+    overflow: hidden;
+    filter: drop-shadow(0 0 5px #000);
+}
+.big-card {
+    width: 180px;
+    padding: 10px;
+}
+
+
+.little-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 70px;
+    transform: translate(80%, 80%);
+    background-color: black;
+}
+
+.big-card:nth-child(2) {
+    transform: translateX(-10%) rotate(-1deg); 
+}
+.big-card:nth-child(4) {
+    transform: translateX(-6%) rotate(-3deg); 
+}
+.big-card:nth-child(6) {
+    transform: rotate(2deg);
+}
+.big-card:nth-child(8) {
+    transform: translate(10%, 3%) rotate(5deg); 
+}
+
+
+.card-container:hover {
+    z-index: 3; /*Pour passer le groupe de carte au dessus des autres groupes à côté*/
+}
+/*Hover sur les grandes cartes*/
+.card-container:hover .big-card:nth-child(2) {
+    transform: translate(-75%, 16%) rotate(-24deg);  
+}
+.card-container:hover .big-card:nth-child(4) {
+    transform: translate(-25%, 6%) rotate(-7deg);  
+}
+.card-container:hover .big-card:nth-child(6) {
+    transform: translate(28%, 8%) rotate(8deg);  
+}
+.card-container:hover .big-card:nth-child(8) {
+    transform: translate(85%, 19%) rotate(24deg);  
+}
+
+/*Hover sur les petites cartes*/
+.card-container:hover .little-card:nth-child(1) {
+    transform: translate(380%, -150%) rotate(-14deg);  
+}
+.card-container:hover .little-card:nth-child(3) {
+    transform: translate(340%, 250%) rotate(-16deg);  
+}
+.card-container:hover .little-card:nth-child(5) {
+    transform: translate(-300%, -140%) rotate(15deg);  
+}
+.card-container:hover .little-card:nth-child(7) {
+    transform: translate(-330%, 240%) rotate(14deg);  
+}
+
+.project-see-more { /*Container du voir plus et du logo*/
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.project-see-more>div {
+    display: flex;
+    gap: 5px;
+}
+.project-see-more i {
+    padding: 5px;
+    background-color: var(--secondaryColor);
+    font-size: 20px;
+}
+.project-see-more-btn {
+    width: fit-content;
+    background-color: var(--secondaryColor);
+    padding: 3px 10px 5px 10px;
+}
+.project-see-more-btn:hover {
+    color: var(--secondaryTextColor);
+}
+
+
+
+/*Définition des squelettes des cartes (celle de preview, des outils..)*/
+.card-squelet {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card-squelet-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-squelet-preview h3{
+    padding: 3px 10px 5px 10px;
+    background-color: var(--secondaryColor);
+    border-radius: 5px;
+}
+
+
+/*Background des petites cartes*/
+#JS {
+    background-color: rgb(210, 210, 0);
+}
+#PHP {
+    background-color: #4F5B93;
+}
+#HTML {
+    background-color: #f16529;
+}
+#CSS {
+    background-color: #2465f1;
+}
+#TRANSPARENT {
+    background-color: transparent;
+}
+
+
+
+
+/*-----------------------Cartes de SAE105 Pokémon------------------------*/
+#pokemon-8 {
+    background-image: url(../media/images/SAE105_preview.png);
+    background-size: cover;
+    background-position: center;
+}
+#pokemon-8::before {
+    content: ""; 
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    filter: brightness(0.8); 
+    z-index: -1; 
+}
+#pokemon-6, #pokemon-4 {
+    background-color: #443C74;
+}
+#pokemon-2 {
+    background-image: url(../media/images/SAE105_bonus.png);
+    background-size: cover;
+    background-position: center;
+}
+
+/*-----------------------Cartes de TP3 panier client------------------------*/
+#TP3-8 {
+    background-image: url(../media/images/TP3_preview.png);
+    background-size: cover;
+    background-position: right; 
+}
+#TP3-8 p, #TP3-6 h3, #TP3-6 p, #TP3-4 h3, #TP3-4 p {
+    color: #000;
+}
+#TP3-6, #TP3-4 {
+    background-color: #dedede;
+}
+#TP3-2 {
+    background-image: url(../media/images/TP3_preview.png);
+    background-size: cover;
+    background-position: left;
+}
+
+/*-----------------------Cartes de SOLALUNE------------------------*/
+#SO-8 {
+    background-image: url(../media/images/SOLALUNE_preview2.png);
+    background-size: cover;
+    background-position: center; 
+}
+#SO-6, #SO-4 {
+    background-color: #262626;
+}
+#SO-2 {
+    background-image: url(../media/images/SOLALUNE_preview.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*-----------------------Cartes de SOLALUNE------------------------*/
+#SPORTKOH-8 {
+    background-image: url(../media/images/SPORTKOH_preview.png);
+    background-size: cover;
+    background-position: center; 
+}
+#SPORTKOH-6, #SPORTKOH-4 {
+    background-color: #ede3ca;
+}
+#SPORTKOH-6 h3, #SPORTKOH-6 p, #SPORTKOH-4 h3, #SPORTKOH-4 p {
+    color: #000;
+}
+#SPORTKOH-2 {
+    background-image: url(../media/images/SPORTKOH_bonus.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/*-----------------------Cartes de SOLALUNE------------------------*/
+#ERGONOMIE-8 {
+    background-image: url(../media/images/ERGONOMIE_preview.png);
+    background-size: cover;
+    background-position: center; 
+}
+#ERGONOMIE-6, #ERGONOMIE-4 {
+    background-color: #b9cec8;
+}
+#ERGONOMIE-6 h3, #ERGONOMIE-6 p, #ERGONOMIE-4 h3, #ERGONOMIE-4 p {
+    color: #000;
+}
+#ERGONOMIE-2 {
+    background-image: url(../media/images/ERGONOMIE_bonus.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+/*-----------------------Cartes de SOLALUNE------------------------*/
+#WESTFEST-8 {
+    background-image: url(../media/images/WESTFEST_preview.png);
+    background-size: cover;
+    background-position: center; 
+}
+#WESTFEST-6, #WESTFEST-4 {
+    background-color: #d990a7;
+} 
+#WESTFEST-2 {
+    background-image: url(../media/images/WESTFEST_bonus.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*-----------------------Cartes de la 3D------------------------*/
+#TROISD-8, #TROISD-6, #TROISD-4, #TROISD-2 {
+    background-size: cover;
+    background-position: center; 
+}
+#TROISD-8 {
+    background-image: url(../media/images/3D1.png);
+}
+#TROISD-6 {
+    background-image: url(../media/images/3D2.png);
+}
+#TROISD-4 {
+    background-image: url(../media/images/3D3.png);
+}
+#TROISD-2 {
+    background-image: url(../media/images/3D4.png);
+}
+
+
+
+/*-----------------------Cartes de SMILE------------------------*/
+#SMILE-8 {
+    background-image: url(../media/images/SMILE_preview.png);
+    background-size: cover;
+    background-position: center; 
+}
+#SMILE-8 p, #SMILE-6 h3, #SMILE-6 p, #SMILE-4 h3, #SMILE-4 p {
+    color: #000;
+}
+#SMILE-6, #SMILE-4 {
+    background-color: #9ac65f;
+} 
+#SMILE-2 {
+    background-image: url(../media/images/SMILE_bonus.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*-----------------------Cartes d'ENDRO------------------------*/
+#ENDRO-8 {
+    background-image: url(../media/images/ENDRO_preview.png);
+    background-size: cover;
+    background-position: center; 
+}
+#ENDRO-8 p, #ENDRO-6 h3, #ENDRO-6 p, #ENDRO-4 h3, #ENDRO-4 p {
+    color: #000;
+}
+#ENDRO-6, #ENDRO-4 {
+    background-color: #fbf5ef;
+} 
+#ENDRO-2 {
+    background-image: url(../media/images/ENDRO_bonus.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/*-----------------------Cartes de PLANCOMM------------------------*/
+#PLANCOMM-8 {
+    background-image: url(../media/images/PLANCOMM_preview.png);
+    background-size: cover;
+    background-position: center; 
+}
+#PLANCOMM-8 p, #PLANCOMM-6 h3, #PLANCOMM-6 p, #PLANCOMM-4 h3, #PLANCOMM-4 p {
+    color: #000;
+}
+#PLANCOMM-6, #PLANCOMM-4 {
+    background-color: #fff;
+} 
+#PLANCOMM-2 {
+    background-image: url(../media/images/PLANCOMM_bonus.png);
+    background-size: cover;
+    background-position: center;
+}

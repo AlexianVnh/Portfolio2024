@@ -155,5 +155,15 @@ function sendMail(){
         message : document.getElementById("message").value
     }
 
-    emailjs.send("service_c7rq51m", "template_kg98jp5", params).then(alert("Votre email a bien été envoyé !"))
+    emailjs.send("service_c7rq51m", "template_kg98jp5", params).then(function() {
+        document.querySelector(".success-message").classList.add("success")
+        setTimeout(function() {
+            document.querySelector(".success-message").classList.remove("success")
+        }, 3000)
+    })
+    // Animation lors du clique sur le bouton envoi
+    document.querySelector(".send-button").classList.add("sent")
+    setTimeout(function() {
+        document.querySelector(".send-button").classList.remove("sent")
+    }, 1000)
 }

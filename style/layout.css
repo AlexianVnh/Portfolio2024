@@ -24,6 +24,8 @@
     --mainColor: #111724;
     --secondaryColor: #293242;
     --secondaryTextColor: #67c2fe;
+    --gradientColor: linear-gradient(49deg, rgba(234,212,0,1) 0%, rgba(241,33,184,1) 49%, rgba(178,102,253,1) 100%);
+
     --white: #FFF;
 
     --heroTitle: 3.500rem;
@@ -54,10 +56,11 @@ i {color: var(--white);}
 
 body {
     background-color: var(--mainColor);
+    background: radial-gradient(circle, var(--mainColor) 20%, #1a2539 50%, var(--mainColor) 80%), linear-gradient(to bottom, var(--mainColor) 10%, #202c46 50%, var(--mainColor) 90%);
 }
-
 header {
     background-color: var(--mainColor);
+    background: linear-gradient(to right, var(--mainColor) 30%, #151d2c 50%, var(--mainColor) 100%);
 
     position: sticky;
     top: 0;
@@ -276,6 +279,7 @@ header {
 }
 .contact-bottom {
     display: flex;
+    position: relative;
     gap: 20px;
 }
 .contact-bottom input {
@@ -291,6 +295,7 @@ header {
 .contact-container ul {
     display: flex;
     gap: 10px;
+    z-index: 2; /*Passer au dessus du after*/
 }
 
 

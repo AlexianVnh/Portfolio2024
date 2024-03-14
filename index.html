@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="style/layout.css">
     <link rel="stylesheet" href="style/components.css">
+    <link rel="stylesheet" href="style/responsive.css">
 
     <link rel="icon" href="media/images/logo-AV-fond.png" type="image/x-icon"> <!--Icone du site-->
 
@@ -39,27 +40,27 @@
 
                     <ul class="dropdown-project-ul">
                         <li class="project-li">
-                            <a href="#projets">
-                                <img src="media/images/SAE105_preview.png" alt="" width="40" height="40">
-                                <p class="p2">PokéCollect</p>
+                            <a href="#btn-all" class="dropdown-btn">
+                                <i class="fa-solid fa-globe"></i>
+                                <p class="p2">Tous les projets</p>
                             </a>
                         </li>
                         <li class="project-li">
-                            <a href="#projets">
-                                <img src="media/images/WESTFEST_preview.png" alt="" width="40" height="40">
-                                <p class="p2">A l'WestFest</p>
+                            <a href="#btn-web" class="dropdown-btn">
+                                <i class="fa-brands fa-html5"></i>
+                                <p class="p2">Developpemnt web</p>
                             </a>
                         </li>
                         <li class="project-li">
-                            <a href="#projets">
-                                <img src="media/images/SOLALUNE_preview.png" alt="" width="40" height="40">
-                                <p class="p2">SoL'ecoute</p>
+                            <a href="#btn-prodgraphique" class="dropdown-btn">
+                                <i class="fa-solid fa-pen"></i>
+                                <p class="p2">Graphisme / 3D</p>
                             </a>
                         </li>
                         <li class="project-li">
-                            <a href="#projets">
-                                <img src="media/images/ENDRO_preview.png" alt="" width="40" height="40">
-                                <p class="p2">Endro Infographie</p>
+                            <a href="#btn-gestion" class="dropdown-btn">
+                                <i class="fa-solid fa-clipboard"></i>
+                                <p class="p2">Gestion / comm</p>
                             </a>
                         </li>
                     </ul>
@@ -68,7 +69,7 @@
                 <li><a href="#contact" class="nav-li p1">Contact</a></li>
             </ul>
         </nav>
-        <img src="media/images/logo-AV-sansfond.png" alt="Logo" width="auto" height="60">
+        <a href=""><img src="media/images/logo-AV-sansfond.png" alt="Logo" width="auto" height="60"></a>
         
         <div class="success-message">Votre email a bien été envoyé !</div>
     </header>
@@ -76,24 +77,27 @@
     <main>
         <section class="hero-banner" id="accueil">
             <h1 class="hero-title scale-transition">Portfolio d'Alexian Vannieuwenhuyze</h1>
-            <h1 class="h1 scale-transition">Recherche <strong class="gradient-color">alternance</strong> Dev web <strong class="gradient-color">front-end</strong></h1>
+            <div class="alternance-container">
+                <h1 class="h1 scale-transition">Recherche <strong class="gradient-color">alternance</strong></h1>
+                <h1 class="h1 scale-transition">&zwnj; Dev web <strong class="gradient-color">front-end</strong></h1>
+            </div> 
         </section>
         
         <section class="last-project-container section-container">
             <h1 class="h1 title-after">Derniers projets</h1>
             <article class="last-project-img">
-                <a href="#projets" class="image1-container image-container">
+                <a href="#projet-SAE105" onclick="changerCarousel('projet-SAE105')" class="image1-container image-container">
                     <img src="media/images/SAE105_preview.png" alt="" class="img-project" width="100%" height="100%">
                     <h1 class="h1">Découvrir</h1>
                     <p>PokeCollect</p>
                 </a>
                 <div class="image2-3-container">
-                    <a href="#projets" class="image-container">
+                    <a href="#projet-TP3" onclick="changerCarousel('projet-TP3')" class="image-container">
                         <img src="media/images/TP3_preview.png" alt="" class="img-project" width="100%" height="100%">           
                         <h1 class="h1">Découvrir</h1>
                         <p>Panier client JS</p>
                     </a>
-                    <a href="#projets" class="image-container">
+                    <a href="#projet-WESTFEST" onclick="changerCarousel('projet-WESTFEST')" class="image-container">
                         <img src="media/images/WESTFEST_preview.png" alt="" class="img-project" width="100%" height="100%">           
                         <h1 class="h1">Découvrir</h1>
                         <p>Affiche A l'WestFest</p>
@@ -267,7 +271,7 @@
                             <h3>Contexte</h3>
                             <p class="p2">
                                 Cette maquette réalisé en BUT M.M.I. m'a permis de 
-                                comprendre les principales notions de l'"ergonomie", 
+                                comprendre les principales notions de l'ergonomie, 
                                 des couleurs, contrastes aux tailles et polices.
                             </p>
                         </div>
@@ -595,7 +599,7 @@
                         <div class="card little-card" id="TRANSPARENT">
                         </div>
                         <div class="card big-card card-squelet-preview" id="PLANCOMM-8"> <!--Carte la plus haute-->
-                            <h3>Plan de communication "A l'WestFest"    </h3>
+                            <h3>Plan de communication "A l'WestFest"</h3>
                             <div class="project-see-more">
                                 <p class="p2 bold">Janvier 2024</p>
                                 <div>
@@ -607,6 +611,238 @@
                     </article>
                 </div>
             </section>
+
+            <!--Uniquement visible sous 950px-->
+            <section class="project-content-responsive">
+                
+                <article class="web-projects projects-line-responsive">
+                    <h2 class="p1 blue-background">Projets webs</h2>
+
+                    <div class="responsive-slider-container">
+                        <span class="slide-arrow slide-left-arrow"></span>
+                        <span class="slide-arrow slide-right-arrow"></span>
+                        
+                        <div class="slide slide-active" id="projet-SAE105">
+                            <img src="media/images/SAE105_preview.png" alt="image du projet" class="slide-img">
+                            <div class="slide-info">
+                                <h3 class="bold">Collection de Pokémon</h3>
+                                <h3>Contexte</h3>
+                                <p class="p2">
+                                    Ce site de gestion d'une Collection
+                                    de Pokémons a été réalisé seul en B.U.T. MMI
+                                    avec un système de login, d'ajout, de suppression 
+                                    et de renommage.
+                                </p>
+                                <div class="project-see-more">
+                                    <p class="p2 text-shadow">Janvier 2024</p>
+                                    <div>
+                                        <a href="" class="project-see-more-btn">En voir +</a>
+                                        <i class="fa-brands fa-html5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slide">
+                            <img src="media/images/ERGONOMIE_preview.png" alt="image du projet" class="slide-img">
+                            <div class="slide-info">
+                                <h3 class="bold">Maquette site fictif</h3>
+                                <h3>Contexte</h3>
+                                <p class="p2">
+                                    Cette maquette réalisé en BUT M.M.I. m'a permis de 
+                                    comprendre les principales notions de l'"ergonomie", 
+                                    des couleurs, contrastes aux tailles et polices.
+                                </p>
+                                <div class="project-see-more">
+                                    <p class="p2 text-shadow">Octobre 2023</p>
+                                    <div>
+                                        <i class="fa-brands fa-html5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slide">
+                            <img src="media/images/SOLALUNE_preview2.png" alt="image du projet" class="slide-img">
+                            <div class="slide-info">
+                                <h3 class="bold">Site d'écoute d'un artiste</h3>
+                                <h3>Contexte</h3>
+                                <p class="p2">
+                                    Ce projet est commun avec un amis, j'ai réalisé la 
+                                    maquette qu'il a ensuite intégré. Ce projet en autonomie
+                                    m'a permis de travailler en équipe hors des études.
+                                </p>
+                                <div class="project-see-more">
+                                    <p class="p2 text-shadow">Août 2023</p>
+                                    <div>
+                                        <a href="https://solaluneplayer.vercel.app/" class="project-see-more-btn">En voir +</a>
+                                        <i class="fa-brands fa-html5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slide" id="projet-TP3">
+                            <img src="media/images/TP3_preview.png" alt="image du projet" class="slide-img">
+                            <div class="slide-info">
+                                <h3 class="bold">Panier client Javascript</h3>
+                                <h3>Contexte</h3>
+                                <p class="p2">
+                                    Ce projet a été réalisé seul en B.U.T. MMI
+                                    et j'ai suivi un TP dans lequel nous avons appris à 
+                                    gérer les éléments du DOM en Javascript.
+                                </p>
+                                <div class="project-see-more">
+                                    <p class="p2 text-shadow">Février 2024</p>
+                                    <div>
+                                        <a href="" class="project-see-more-btn">En voir +</a>
+                                        <i class="fa-brands fa-html5"></i>
+                                    </div>
+                                </div>
+
+                            
+
+
+                            </div>
+                        </div>
+
+                        <div class="slide">
+                            <img src="media/images/SPORTKOH_preview.png" alt="image du projet" class="slide-img">
+                            <div class="slide-info">
+                                <h3 class="bold">Site vitrine SportKoh</h3>
+                                <h3>Contexte</h3>
+                                <p class="p2">
+                                    SportKoh a été réalisé en équipe en B.U.T. Informatique,
+                                    à partir du recueil des besoins nous avons
+                                    imaginé et développé un site vitrine de séjours sportifs.
+                                </p>
+                                <div class="project-see-more">
+                                    <p class="p2 text-shadow">Janvier 2023</p>
+                                    <div>
+                                        <a href="" class="project-see-more-btn">En voir +</a>
+                                        <i class="fa-brands fa-html5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="prodgraphique-projects projects-line-responsive">
+                    <h2 class="p1 blue-background">Projets de graphisme / 3D</h2>
+                    <div class="responsive-slider-container">
+                        <span class="slide-arrow slide2-left-arrow"></span>
+                        <span class="slide-arrow slide2-right-arrow"></span>
+                    
+                        <div class="slide2 slide-active">
+                            <img src="media/images/WESTFEST_preview.png" alt="image du projet" class="slide-img">
+                            <div class="slide-info">
+                                <h3 class="bold">Affiche A l'WestFest</h3>
+                                <h3>Contexte</h3>
+                                <p class="p2">
+                                    Pour la première année du Festival A l'WestFest
+                                    j'ai réalisé l'affiche promotionnelle sur base du plan de 
+                                    communication retenu.
+                                </p>
+                                <div class="project-see-more">
+                                    <p class="p2 bold">Janvier 2024</p>
+                                    <div>
+                                        <a href="media/telechargements/WESTFEST.pdf" target="_blank" class="project-see-more-btn">Télécharger</a>
+                                        <i class="fa-solid fa-pen"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide2">
+                            <img src="media/images/3D1.png" alt="image du projet" class="slide-img">
+                            <div class="slide-info">
+                                <h3 class="bold">3D Blender</h3>
+                                <p class="p2">
+                                    J'ai commencé la 3D sur Sketchup durant le collège pour finalement poursuivre
+                                    sur Blender sur la période du lycée. J'ai d'ailleurs réalisé mon projet
+                                    d'Art au bac sur la 3D.
+                                </p>
+                                <div class="project-see-more">
+                                    <p class="p2 bold">2021 - 2022</p>
+                                    <div>
+                                        <i class="fa-solid fa-pen"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="gestion-projects projects-line-responsive">
+                    <h2 class="p1 blue-background">Projets de gestion / comm</h2>
+                    <div class="responsive-slider-container">
+                        <span class="slide-arrow slide3-left-arrow"></span>
+                        <span class="slide-arrow slide3-right-arrow"></span>
+                    
+                        <div class="slide3 slide-active">
+                            <img src="media/images/SMILE_preview.png" alt="image du projet" class="slide-img">
+                            <div class="slide-info">
+                                <h3 class="bold">Projet Smile et sa gestion</h3>
+                                <h3>Contexte</h3>
+                                <p class="p2">
+                                    Smile est un projet commun en B.U.T. MMI
+                                    dans lequel nous avons créer et gérer un projet 
+                                    avant de le pitcher.
+                                </p>
+                                <div class="project-see-more">
+                                    <p class="p2 bold">Novembre 2023</p>
+                                    <div>
+                                        <a href="media/telechargements/SMILE.pdf" target="_blank" class="project-see-more-btn">Télécharger</a>
+                                        <i class="fa-solid fa-clipboard"></i>
+                                        <i class="fa-solid fa-pen"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide3">
+                            <img src="media/images/ENDRO_preview.png" alt="image du projet" class="slide-img">
+                            <div class="slide-info">
+                                <h3 class="bold">Audit de communication d'Endro</h3>
+                                <h3>Contexte</h3>
+                                <p class="p2">
+                                    En équipe et en B.U.T. MMI
+                                    nous avons auditer l'entreprise Endro
+                                    et réalisé une infographie récapitulative.
+                                </p>
+                                <div class="project-see-more">
+                                    <p class="p2 bold">Decembre 2023</p>
+                                    <div>
+                                        <a href="media/telechargements/ENDRO.pdf" target="_blank" class="project-see-more-btn">Télécharger</a>
+                                        <i class="fa-solid fa-clipboard"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide3">
+                            <img src="media/images/ENDRO_preview.png" alt="image du projet" class="slide-img">
+                            <div class="slide-info">
+                                <h3 class="bold">Plan de communication "A l'WestFest"</h3>
+                                <h3>Contexte</h3>
+                                <p class="p2">
+                                    Réalisé à 4 en B.U.T. MMI
+                                    nous avons élaborer le plan de communication du Festival
+                                    "A l'WestFest" en passant plusieurs étapes menant à
+                                    un dossier complet.
+                                </p>
+                                <div class="project-see-more">
+                                    <p class="p2 bold">Janvier 2024</p>
+                                    <div>
+                                        <a href="media/telechargements/PLANCOMM.pdf" target="_blank" class="project-see-more-btn">Télécharger</a>
+                                        <i class="fa-solid fa-clipboard"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
         </section>
 
         <span class="separation-line"></span>
@@ -616,27 +852,27 @@
             
             <h2 class="p1 blue-background">Langages</h2>
             <ul class="tool-list">
-                <li><img src="media/images/logo/HTML-logo.png" alt="HTML" height="60px">HTML</li>
-                <li><img src="media/images/logo/CSS-logo.png" alt="CSS" height="60px">CSS</li>
-                <li><img src="media/images/logo/JavaScript-logo.png" alt="Javascript" height="60px">Javascript</li>
-                <li><img src="media/images/logo/PHP-logo.png" alt="PHP" height="60px">PHP</li>
-                <li><img src="media/images/logo/SQL-logo.png" alt="SQL" height="60px">SQL</li>
-                <li><img src="media/images/logo/JAVA-logo.png" alt="JAVA" height="60px">JAVA</li>
-                <li><img src="media/images/logo/C_Logo.png" alt="C" height="60px">C</li>
-                <li><img src="media/images/logo/python-logo.png" alt="Python" height="60px">Python</li>
+                <li class="p2"><img src="media/images/logo/HTML-logo.png" alt="HTML" height="60px">HTML</li>
+                <li class="p2"><img src="media/images/logo/CSS-logo.png" alt="CSS" height="60px">CSS</li>
+                <li class="p2"><img src="media/images/logo/JavaScript-logo.png" alt="Javascript" height="60px">Javascript</li>
+                <li class="p2"><img src="media/images/logo/PHP-logo.png" alt="PHP" height="60px">PHP</li>
+                <li class="p2"><img src="media/images/logo/SQL-logo.png" alt="SQL" height="60px">SQL</li>
+                <li class="p2"><img src="media/images/logo/JAVA-logo.png" alt="JAVA" height="60px">JAVA</li>
+                <li class="p2"><img src="media/images/logo/C_Logo.png" alt="C" height="60px">C</li>
+                <li class="p2"><img src="media/images/logo/python-logo.png" alt="Python" height="60px">Python</li>
             </ul>
 
             <h2 class="p1 blue-background">Applications</h2>
             <ul class="tool-list">
-                <li><img src="media/images/logo/vsc-logo.png" alt="VisualStudioCode" height="60px">VisualStudioCode</li>
-                <li><img src="media/images/logo/figma_logo.png" alt="Figma" height="60px">Figma</li>
-                <li><img src="media/images/logo/AffinityDesigner.png" alt="AffinityDesigner" height="60px">AffinityDesigner</li>
-                <li><img src="media/images/logo/AffinityPhoto.png" alt="AffinityPhoto" height="60px">AffinityPhoto</li>
-                <li><img src="media/images/logo/illusatrator_logo.png" alt="AdobeIllustrator" height="60px">AdobeIllustrator</li>
-                <li><img src="media/images/logo/SketchUp-Logo.png" alt="Sketchup" height="60px">Sketchup</li>
-                <li><img src="media/images/logo/Blender-logo.png" alt="Blender" height="60px">Blender</li>
-                <li><img src="media/images/logo/Trello.png" alt="Trello" height="60px">Trello</li>
-                <li><img src="media/images/logo/DaVinciResolve.png" alt="DaVinci" height="60px">DaVinci</li>
+                <li class="p2"><img src="media/images/logo/vsc-logo.png" alt="VisualStudioCode" height="60px">VisualStudioCode</li>
+                <li class="p2"><img src="media/images/logo/figma_logo.png" alt="Figma" height="60px">Figma</li>
+                <li class="p2"><img src="media/images/logo/AffinityDesigner.png" alt="AffinityDesigner" height="60px">AffinityDesigner</li>
+                <li class="p2"><img src="media/images/logo/AffinityPhoto.png" alt="AffinityPhoto" height="60px">AffinityPhoto</li>
+                <li class="p2"><img src="media/images/logo/illusatrator_logo.png" alt="AdobeIllustrator" height="60px">AdobeIllustrator</li>
+                <li class="p2"><img src="media/images/logo/SketchUp-Logo.png" alt="Sketchup" height="60px">Sketchup</li>
+                <li class="p2"><img src="media/images/logo/Blender-logo.png" alt="Blender" height="60px">Blender</li>
+                <li class="p2"><img src="media/images/logo/Trello.png" alt="Trello" height="60px">Trello</li>
+                <li class="p2"><img src="media/images/logo/DaVinciResolve.png" alt="DaVinci" height="60px">DaVinci</li>
             </ul>
         </section>
 

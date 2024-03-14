@@ -1,0 +1,180 @@
+/*-----------------------All section responsive------------------------*/
+@media (max-width: 950px) {
+    .section-container {
+        width: 82%;
+    }
+}
+@media (max-width: 900px) {
+    .hero-title {font-size: 3rem;}
+    .h1 {font-size: 2rem;}
+}
+@media (max-width: 530px) {
+    .hero-title {font-size: 2.5rem;}
+    .h1 {font-size: 1.7rem;}
+    header a {
+        display: none;
+    }
+}
+@media (max-width: 650px) {
+    .p1 {font-size: 1.1rem;}
+    .p2 {font-size: 0.95rem;}
+}
+
+/*-----------------------Last project responsive------------------------*/
+@media (max-width: 1100px) {
+    .last-project-container {
+        margin-top: -50px;
+    }
+    .last-project-img {
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+    }
+    .last-project-img>div { /*Container des images de droite*/
+        display: flex;
+        flex-direction: row;
+    }
+    .image1-container {
+        width: 100%;
+        height: 60%;
+    }
+    .image2-3-container {
+        width: 100%;
+        height: 40%;
+        gap: 10px;
+    }
+    .image2-3-container>a {
+        width: 50%;
+    }
+}
+
+@media (max-width: 700px) { /*On enlève toute la section en dessous de 700px*/
+    .last-project-container {
+        display: none;
+    }
+}
+
+
+
+/*-----------------------Presentation responsive------------------------*/
+@media (max-width: 950px) {
+    .left-presentation-container {
+        max-width: none;
+    }
+    .right-presentation-container {
+        display: none;
+    }
+}
+
+
+/*-----------------------Projects responsive------------------------*/
+@media (max-width: 1100px) {
+    .project-btn-list button {
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 950px) {
+    .project-content {
+        display: none;
+    }
+    .project-content-responsive {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .projects-line-responsive>h2 {
+        margin-bottom: 40px;
+    }
+    .responsive-slider-container {
+        position: relative;
+        display: flex;
+    }
+    .slide, .slide2, .slide3 {
+        position: relative;
+        display: none;
+        flex-direction: column;
+        overflow-y: hidden;
+        width: 100%;
+    }
+    .slide::after, .slide2::after, .slide3::after {
+        content: "";
+        position: relative;
+        height: 2px; width: 100%;
+        background-color: var(--white);
+    }
+    .slide-active {
+        display: flex;
+    }
+    .slide-img {
+        background-color: aqua;
+        height: 350px;
+        object-fit: cover;
+    }
+    .slide-arrow {
+        position: absolute;
+        height: 18px; width: 18px;
+        border-left: solid 4px var(--white);
+        border-top: solid 4px var(--white);
+        cursor: pointer;
+    }
+    .slide-left-arrow, .slide2-left-arrow, .slide3-left-arrow {
+        left: -30px; top: 50%;
+        transform: rotate(-45deg);
+    }
+    .slide-right-arrow, .slide2-right-arrow, .slide3-right-arrow {
+        right: -30px; top: 50%;
+        transform: rotate(135deg);
+    }
+    
+    .slide-info {
+        position: absolute;
+        bottom: 0;
+        transform: translateY(300px);
+        transition: all 0.3s ease;
+
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 0 10px;
+        background-color: var(--secondaryColor);
+    }
+    .slide-active:hover .slide-info {
+        transform: translateY(0);
+        padding: 10px 10px;
+    }
+    .project-see-more i, .project-see-more a {
+        background-color: var(--mainColor);
+    }
+    
+}
+
+/*-----------------------Contact responsive------------------------*/
+@media (max-width: 950px) {
+    .contact-container>section {
+        flex-direction: column;
+    }
+    .contact-form {
+        width: 100%;
+    }
+    .contact-paragraph {
+        position: relative;
+        width: auto;
+        max-width: none;
+        margin-bottom: 40px;
+    }
+    .contact-paragraph i {
+        position: absolute;
+        bottom: -30px; right: 100%;
+        transform: rotate(147deg);
+    }
+}
+
+@media (max-width: 505px) {
+    .contact-top {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contact-bottom {
+        flex-direction: column;
+    }
+}

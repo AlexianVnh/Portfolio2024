@@ -159,13 +159,18 @@ header {
 .prensentation-content {
     display: flex;
     justify-content: space-between;
-    height: fit-content;
 }
 .left-presentation-container {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 30px;
     max-width: 45%;
+}
+.presentation-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 .presentation-contact {
     display: flex;
@@ -183,7 +188,7 @@ header {
 
 .right-presentation-container {
     max-width: 45%;
-    max-height: 100%;
+    max-height: 450px;
 }
 .right-presentation-container>img {
     object-fit: cover;

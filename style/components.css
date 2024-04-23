@@ -72,40 +72,6 @@
 }
 
 
-.dropdown { /*Case projet du nav*/
-    display: flex;
-    align-items: center; 
-    position: relative;
-}
-.dropdown-project-ul { /*Menu déroulant des projets*/
-    display: none; /*Pas affiché de base*/
-    position: absolute;
-    top: 64px; left: 0;
-    z-index: 2; /*devant les textes en bas*/
-    
-    background-color: var(--mainColor);
-    border: solid 1.5px var(--secondaryColor);
-    border-radius: 10px;
-    overflow: hidden; /*Eviter les angles droits au hover*/
-}
-.dropdown-arrow { /*Flèche du menu déroulant*/
-    width: 8px; height: 8px;
-    border-bottom: solid 2px var(--white);
-    border-right: solid 2px var(--white);
-    transform: rotate(45deg);
-
-    margin: 10px 0 0 10px; 
-}
-.dropdown:hover .dropdown-project-ul { /*Quand on survole la case projets, un menu déroulant se déplie*/
-    display: flex;
-    flex-direction: column;
-}
-.dropdown:hover .dropdown-arrow { /*Quand on survole la case projets, la flèche se retourne*/
-    transform: rotate(225deg);
-    margin: 14px 0 0 10px;
-}
-
-
 .project-li a { /*Case d'un projet du menu déroulant*/
     display: flex;
     align-items: center;

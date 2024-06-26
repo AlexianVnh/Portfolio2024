@@ -200,8 +200,8 @@ header {
 /*-----------------------Container des projets------------------------*/
 .project-btn-list {
     display: flex;
-    border-left: solid 1px var(--white);
-    border-bottom: solid 3px var(--white);
+    border: solid 1px var(--white);
+    width: fit-content;
 }
 
 .project-content-list {

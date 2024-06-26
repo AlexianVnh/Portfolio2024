@@ -367,6 +367,59 @@
 
 
 
+/*----------------------- Confiz ------------------------*/
+#liskov-8 {
+    background-image: url(../media/images/infographie.png);
+    background-size: cover;
+    background-position: center;
+}
+#liskov-8::before {
+    content: ""; 
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    filter: brightness(0.8); 
+    z-index: -1; 
+}
+#liskov-6, #liskov-4 {
+    background-color: #FFF9EB;
+}
+#liskov-6 h3, #liskov-6 p, #liskov-4 h3, #liskov-4 p {
+    color: #000;
+}
+#liskov-2 {
+    background-image: url(../media/images/infographie.png);
+    background-size: cover;
+    background-position: center;
+}
+
+/*----------------------- Confiz ------------------------*/
+#confiz-8 {
+    background-image: url(../media/images/confiz.png);
+    background-size: cover;
+    background-position: center;
+}
+#confiz-8::before {
+    content: ""; 
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    filter: brightness(0.8); 
+    z-index: -1; 
+}
+#confiz-6, #confiz-4 {
+    background-color: #FFF9EB;
+}
+#confiz-6 h3, #confiz-6 p, #confiz-4 h3, #confiz-4 p {
+    color: #000;
+}
+#confiz-2 {
+    background-image: url(../media/images/confiz_admin.png);
+    background-size: cover;
+    background-position: center;
+}
 
 /*-----------------------Cartes de SAE105 Pokémon------------------------*/
 #pokemon-8 {
